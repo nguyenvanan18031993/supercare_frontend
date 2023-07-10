@@ -1,18 +1,14 @@
 
 <template>
     <div class="isolate bg-white px-6 py-10 sm:py-10 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-                <img class="mx-auto h-20 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" />
-                <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                    Sign in to your account
-                </h2>
-            </div>
+        
         <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Create your business</h2>
+            <img class="mx-auto h-20 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" />
+            <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Create your business</h2>
             <p class="mt-10 text-center text-sm text-gray-500">
                 Already have an account?
                 {{ " " }}
-                <router-link to="/users/login" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Login</router-link>
+                <router-link to="/users/login" href="#" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Login</router-link>
             </p>
         </div>
         <form action="#" method="POST" class="mx-auto mt-8 max-w-xl sm:mt-8">
