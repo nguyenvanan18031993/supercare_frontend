@@ -2,18 +2,28 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView'
+import PublicLayout from '../PublicLayout'
+import PrivateLayout from '../PrivateLayout'
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView 
+    component: PrivateLayout,
+    children:[
+      {
+        path: 'dashboard',
+        component: HomeView
+      }
+    ]
   },
   {
-    path: '/users/',
+    path: '/users',
+    component: PublicLayout,
     children: [
       {
         path: 'login',
         component: LoginView
+        
       },
       {
         path: 'register',
@@ -21,6 +31,7 @@ const routes = [
       }
     ]
   },
+  
   {
     path: '/about',
     name: 'about',
