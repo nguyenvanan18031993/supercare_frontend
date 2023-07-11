@@ -13,6 +13,10 @@ const routes = [
       {
         path: 'dashboard',
         component: HomeView
+      },
+      {
+        path: 'users',
+        component: () => import(/* webpackChunkName: "uesrs" */ '../views/UserView.vue')
       }
     ]
   },
