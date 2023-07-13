@@ -6,10 +6,17 @@
         :class="[expand ? 'left__column__expand' : 'left__column']"
         class="bg-white rounded shadow-lg transition-all duration-500 ease-in-out h-screen fixed"
       >
-        <div class="p-3 border-b border-solid border-gray-200 ">
-          <div class="flex items-center justify-center" style="height: 40px !important">
-            <button class="text-gray-400" style="padding: 8px !important; font-size: 20px !important" @click="expand = !expand">
-              <svg
+        <div class="p-3 border-b border-solid border-gray-200">
+          <div
+            class="flex items-center justify-center"
+            style="height: 40px !important"
+          >
+            <button
+              class="text-gray-400"
+              style="padding: 8px !important; font-size: 20px !important"
+              @click="expand = !expand"
+            >
+               <svg
                 v-if="expand"
                 viewBox="64 64 896 896"
                 focusable="false"
@@ -22,8 +29,9 @@
                 <path
                   d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 000 13.8z"
                 ></path>
-              </svg>
-              <svg
+              </svg> 
+              
+               <svg
                 v-else
                 viewBox="64 64 896 896"
                 focusable="false"
@@ -31,12 +39,12 @@
                 width="1em"
                 height="1em"
                 fill="currentColor"
-                aria-hidden="true" 
+                aria-hidden="true"
               >
                 <path
                   d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM142.4 642.1L298.7 519a8.84 8.84 0 000-13.9L142.4 381.9c-5.8-4.6-14.4-.5-14.4 6.9v246.3a8.9 8.9 0 0014.4 7z"
                 ></path>
-              </svg>
+              </svg> 
             </button>
             <div class="flex items-center justify-center w-full">
               <img
@@ -46,7 +54,6 @@
               />
             </div>
           </div>
-          
         </div>
         <ul class="space-y-2 text-sm p-3">
           <li v-for="(nav, i) in navs" :key="`nav-item-${i}`">
@@ -80,17 +87,24 @@
         :class="[expand ? 'right__column__expand' : 'right__column']"
         class="transition-all duration-500 ease-in-out right__column_expand"
       >
-        <div class="px-4 text-gray-600">
-          <div :class="[expand ? 'header__top__expand' : 'header__top']"
-           class="flex justify-between fixed bg-white" style=" padding: 8px !important;" >
-            <h1 class="text-2xl flex items-center justify-center" >Users</h1>
+        <div class="text-gray-600">
+          <div
+            :class="[expand ? 'header__top__expand' : 'header__top']"
+            class="flex justify-between fixed bg-white border-b border-l"
+            style="padding: 8px !important; height: 65px !important"
+          >
+            <h1 class="text-2xl flex items-center justify-center">Users</h1>
             <div>
               <span>
-                <img class="h-10 w-10 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+                <img
+                  class="h-10 w-10 flex-none rounded-full bg-gray-50"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
               </span>
             </div>
           </div>
-          <div class="p-4" style="padding-top: 65px">
+          <div style="padding-top: 65px">
             <router-view />
           </div>
         </div>
@@ -118,6 +132,9 @@ export default {
       ],
     };
   },
+  mounted() {
+    console.log(process.env.VUE_APP_TITLE);
+  },
 };
 </script>
 <style scoped>
@@ -137,10 +154,10 @@ export default {
   padding-left: 15% !important;
 }
 
-.header__top{
-    width: 96% !important;
+.header__top {
+  width: 96% !important;
 }
-.header__top__expand{
-    width: 84% !important;
+.header__top__expand {
+  width: 84% !important;
 }
 </style>
