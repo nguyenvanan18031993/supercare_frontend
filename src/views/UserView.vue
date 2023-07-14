@@ -3,13 +3,13 @@
     <div class="flex flex-col">
       <div class="overflow-x-auto">
         <div class="inline-block min-w-full">
-          <div class="flex">
+          <div class="">
             <div
               :class="[expand ? 'left__col__expand' : 'left__col']"
-              class="transition-all duration-500 ease-in-out"
+              class="transition-all duration-500 ease-in-out fixed"
             >
               <div v-show="expand">
-                <h1>All Users</h1>
+                <h1>All Users transition-all duration-500 ease-in-out fixed transition-all duration-500 ease-in-out fixed transition-all duration-500 ease-in-out fixed</h1>
               </div>
             </div>
             <div
@@ -81,7 +81,7 @@ export default {
 }
 
 .left__col__expand {
-  width: 15% !important;
+  width: 13% !important;
 }
 
 .right__col {
@@ -90,5 +90,6 @@ export default {
 
 .right__col__expand {
   width: 85% !important;
+  margin-left: 15% !important;
 }
 </style>
